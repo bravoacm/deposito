@@ -10,20 +10,20 @@ import org.junit.Test;
  *	Set de pruebas
  *
  *	Nomenclaturas:
- *	DN-> getDepositoNivel
+ *	DM-> getDepositoMax
  *
  */
 public class testDepositoCombustible {
 
-	private double depNivel;
 	private DepositoCombustible tank;
+	private double depMax;
 
 
 	void DepositoCombustible(double tankMax, double tankLevel) {
-	       this.depNivel = tankLevel;
+	       this.depMax   = tankMax;
 	    }
-	public double getDepositoNivel(){
-	       return depNivel;
+	public double getDepositoMax(){
+	       return depMax;
 	    }
 	
 	
@@ -33,7 +33,7 @@ public class testDepositoCombustible {
 	}
 	@Test
 	public void testDN1() {
-		if (tank.getDepositoNivel() != 0.0)
+		if (tank.getDepositoMax() != 40.0)
 			fail();
 	}
 }
